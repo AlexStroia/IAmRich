@@ -5,11 +5,30 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  static const String _title = "I am rich boy";
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar:
-            AppBar(title: Text("I Am rich"), backgroundColor: Colors.white));
+    return MaterialApp(
+        title: _title,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(_title),
+              backgroundColor: Colors.blue,
+              centerTitle: true,
+            ),
+            body: new Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              children: <Widget>[
+                new RaisedButton(
+                  child: new Text("Hello"),
+                ),
+                new RaisedButton(
+                  child: new Text("Hello from here"),
+                )
+              ],
+            )));
   }
 }
