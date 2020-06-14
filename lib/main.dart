@@ -12,23 +12,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: _title,
         home: Scaffold(
-            appBar: AppBar(
-              title: Text(_title),
-              backgroundColor: Colors.blue,
-              centerTitle: true,
+          appBar: AppBar(
+            title: Text(_title),
+            backgroundColor: Colors.blue,
+            centerTitle: true,
+          ),
+          body: Center(
+            child: Image(image: NetworkImage("https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"),
+            alignment: Alignment.center
             ),
-            body: new Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-
-              children: <Widget>[
-                new RaisedButton(
-                  child: new Text("Hello"),
-                ),
-                new RaisedButton(
-                  child: new Text("Hello from here"),
-                )
-              ],
-            )));
+          )
+        ));
   }
 }
