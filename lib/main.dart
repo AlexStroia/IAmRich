@@ -12,15 +12,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: _title,
         home: Scaffold(
-          appBar: AppBar(
-            title: Text(_title),
-            backgroundColor: Colors.blue,
-            centerTitle: true,
-          ),
-          body: Center(
-            child: Image(image: AssetImage("images/diamond.png")
+            backgroundColor: Colors.red,
+            appBar: AppBar(
+              title: Text(_title),
+              backgroundColor: Colors.blue,
+              centerTitle: true,
             ),
-          )
-        ));
+            body: Center(
+              child: Image(image: AssetImage("images/diamond.png")),
+            )));
   }
 }
